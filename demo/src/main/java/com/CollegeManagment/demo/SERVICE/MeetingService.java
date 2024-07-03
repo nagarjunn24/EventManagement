@@ -1,4 +1,5 @@
 package com.CollegeManagment.demo.SERVICE;
+
 import com.CollegeManagment.demo.ENTITY.Meeting;
 import com.CollegeManagment.demo.REPOSITORY.MeetingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +14,7 @@ public class MeetingService {
     private MeetingRepository meetingRepository;
 
     public Meeting saveMeeting(Meeting meeting) {
-        return meetingRepository.saveAll(meeting);
+        return meetingRepository.save(meeting);  // Corrected method call
     }
 
     public List<Meeting> getAllMeetings() {

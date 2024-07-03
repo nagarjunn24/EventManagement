@@ -1,7 +1,9 @@
 package com.CollegeManagment.demo.REPOSITORY;
+
 import com.CollegeManagment.demo.ENTITY.Meeting;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface MeetingRepository<Meeting> extends JpaRepository<Meeting, Long> {
-    com.CollegeManagment.demo.ENTITY.Meeting saveAll(com.CollegeManagment.demo.ENTITY.Meeting meeting);
+@Repository
+public interface MeetingRepository extends JpaRepository<Meeting, Long> {
 }

@@ -10,6 +10,7 @@ import java.sql.Date;
 import java.sql.Time;
 
 @Getter
+@Setter
 @Entity
 @Table(name = "meetings")
 public class Meeting {
@@ -26,7 +27,7 @@ public class Meeting {
 
     @Enumerated(EnumType.STRING)
     @Column(name = "type", nullable = false)
-    private String MeetingType ;
+    private MeetingType type;
 
     @Column(nullable = false)
     private Date date;
@@ -39,6 +40,10 @@ public class Meeting {
     private User user;
 
     // Getters and Setters
+    public enum MeetingType {
+        ONLINE,
+        OFFLINE
+    }
 
     public void setId(Long id) {
         this.id = id;
@@ -52,8 +57,8 @@ public class Meeting {
         this.description = description;
     }
 
-    public void setType(String MeetingType) {
-        this.MeetingType = MeetingType;
+    public void setType(MeetingType type) {
+        this.type = type;
     }
 
     public void setDate(Date date) {
