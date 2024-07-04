@@ -1,0 +1,11 @@
+{
+  "name": "eventmanagement-main",
+  "version": "1.0.0",
+  "description": "\"# EventManagement\"",
+  "main": "stylelint.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
