@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Meeting</title>
+    <link rel="stylesheet" href="schedule_meeting.css">
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/login">Sign In</a></li>
+        <li><a href="#" id="logoutButton">Log Out</a></li>
+    </ul>
+</nav>
+<section class="container">
+    <header>Schedule Meeting</header>
+    <form action="/schedule_meeting" method="post" class="form">
+        <div class="input-box">
+            <label>Meeting Name</label>
+            <input type="text" name="meetingName" placeholder="Enter meeting name" required />
+        </div>
+        <div class="input-box">
+            <label>Description</label>
+            <input type="text" name="description" placeholder="Enter meeting description" required />
+        </div>
+        <div class="input-box">
+            <label>Meeting Type</label>
+            <input type="text" name="type" placeholder="Enter meeting type" required />
+        </div>
+        <div class="input-box">
+            <label>Date</label>
+            <input type="date" name="date" required />
+        </div>
+        <div class="input-box">
+            <label>Duration (hours)</label>
+            <input type="number" name="duration" placeholder="Enter meeting duration" required />
+        </div>
+        <div class="input-box">
+            <label>Time</label>
+            <input type="time" name="time" required />
+        </div>
+        <div class="input-box">
+            <label>Number of Participants</label>
+            <input type="number" name="participants" placeholder="Enter number of participants" required />
+        </div>
+        <div class="input-box">
+            <label>College ID</label>
+            <input type="text" name="collegeId" placeholder="Enter college ID" required />
+        </div>
+        <div class="input-box">
+            <label>Email ID</label>
+            <input type="email" name="emailId" placeholder="Enter email ID" required />
+        </div>
+        <button type="submit">Schedule</button>
+    </form>
+</section>
+<script>
+    document.getElementById('logoutButton').addEventListener('click', function() {
+        // Perform any necessary log out actions here, such as clearing session data
+        // After logging out, redirect to the home page
+        window.location.href = '/';
+    });
+</script>
+</body>
+</html>

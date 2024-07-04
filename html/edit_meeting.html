@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Meeting</title>
+    <link rel="stylesheet" href="edit_meeting.css">
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login.html">Sign In</a></li>
+        <li><a href="login.html" class="logout">Log Out</a></li>
+    </ul>
+</nav>
+<section class="container">
+    <header>Edit Meeting</header>
+    <form action="update_meeting" method="post" class="form">
+        <!-- Meeting ID (hidden) -->
+        <input type="hidden" name="meetingId">
+        
+        <div class="input-box">
+            <label>Meeting Name</label>
+            <input type="text" name="meetingName" placeholder="Enter meeting name" required>
+        </div>
+        
+        <div class="input-box">
+            <label>Description</label>
+            <input type="text" name="description" placeholder="Enter meeting description" required>
+        </div>
+        
+        <div class="input-box">
+            <label>Type</label>
+            <select name="type" required>
+                <option value="student">Student</option>
+                <option value="faculty">Faculty Member</option>
+            </select>
+        </div>
+        
+        <div class="input-box">
+            <label>Date</label>
+            <input type="date" name="date" required>
+        </div>
+        
+        <div class="input-box">
+            <label>Time</label>
+            <input type="time" name="time" required>
+        </div>
+        
+        <button type="submit">Update Meeting</button>
+    </form>
+</section>
+</body>
+</html>
